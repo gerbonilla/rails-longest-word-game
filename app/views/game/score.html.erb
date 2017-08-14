@@ -1,0 +1,8 @@
+<h1><%= @result[:message] %></h1>
+<p>Your score: <%= @result[:score] %></p>
+<p>Your time: <%= @result[:time] %> seconds</p>
+<p><%= cookies[:score] %></p>
+
+
+<%= link_to 'Play Again', game_path %>
+<%= link_to 'Start Again', startAgain_path %>

@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+ @import 'game';
+ @import 'score';
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500|Raleway');
+
+ h1,h2,h3 {
+  font-family: 'Montserrat';
+  font-weight: lighter;
+ }
+
+ body {
+  font-family: 'Raleway';
+}
