@@ -1,3 +1,40 @@
 body {
   text-align: center;
 }
+
+.wrapper {
+  width: 400px;
+  margin: 80px auto;
+}
+
+.form-control {
+  font-size: 30px;
+  font-weight: lighter;
+  height: 60px;
+  background-color: #272729;
+  border: none;
+}
+
+#answer:focus, #answer:active {
+  outline: none !important;
+  box-shadow: none;
+  border: none;
+}
+
+.home-grid {
+  padding-top: 60px;
+  h2 {
+    font-size: 60px;
+  }
+}
+
+input#submit-answer {
+  background-color: rgba(0,0,0,0);
+  font-size: 33px;
+  font-weight: lighter;
+  &:active, &:hover {
+    outline: none !important;
+    text-decoration: none !important;
+    color: white;
+  }
+}

@@ -25,9 +25,9 @@ class GameController < ApplicationController
     url = "https://wagon-dictionary.herokuapp.com/" + attempt.downcase
     if valid_in_grid?(attempts, grid)
       word_check = JSON.parse(open(url).read)
-      result = { time: time, score: word_check["length"] * 99 / (time + 1), message: "well done!" } if word_check["found"]
-      result = { time: time, score: 0, message: "not an english word" } unless word_check["found"]
-    else result = { time: time, score: 0, message: "not in the grid" }
+      result = { time: time, score: word_check["length"] * 99 / (time + 1), message: "Well Done" } if word_check["found"]
+      result = { time: time, score: 0, message: "Not a Word" } unless word_check["found"]
+    else result = { time: time, score: 0, message: "Try Again" }
     end
     cookies[:score] = cookies[:score].to_i + result[:score]
     return result

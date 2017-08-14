@@ -1,8 +1,18 @@
-<h1><%= @result[:message] %></h1>
-<p>Your score: <%= @result[:score] %></p>
-<p>Your time: <%= @result[:time] %> seconds</p>
-<p><%= cookies[:score] %></p>
+<div class="results">
+  <h2><%= @result[:message] %></h2>
+  <p>Your score: <%= @result[:score] %></p>
+  <p>Your time: <%= @result[:time] %> seconds</p>
+</div>
 
+<div class="total-score">
+  <div class="total-score-content">
+    <p>Total Score</p>
+    <h3><%= cookies[:score] %></h3>
+  </div>
+</div>
 
-<%= link_to 'Play Again', game_path %>
-<%= link_to 'Start Again', startAgain_path %>
+<div class="score-links">
+  <%= link_to 'Play Again', game_path %>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <%= link_to 'Start Again', startAgain_path %>
+</div>
